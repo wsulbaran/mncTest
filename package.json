@@ -1,0 +1,27 @@
+{
+  "name": "mnc-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --watch  server server/index.js",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "wsulbaran",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "bootstrap": "^4.4.1",
+    "express": "^4.17.1",
+    "next": "^9.5.3",
+    "node-fetch": "^2.6.1",
+    "node-sass": "^4.13.1",
+    "nodemon": "^2.0.4",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.0.0-beta.16",
+    "react-dom": "^16.13.1",
+    "soap": "^0.33.0"
+  }
+}
