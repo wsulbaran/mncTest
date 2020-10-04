@@ -2,7 +2,7 @@
 import { useForm } from "react-hook-form";
 
 const InputSearch = ({onSubmit}) => {
-  const {register, handleSubmit} = useForm();
+  const {register, errors, handleSubmit} = useForm();
   //const onSubmit = (data) =>  setSearch(data)
 
   return(
@@ -12,12 +12,16 @@ const InputSearch = ({onSubmit}) => {
           <div className="col-sm">
             <div className="form-group">
               <input
-                ref={register}
+                ref={register({ required: true })}
                 type="text"
                 name="search"
                 placeholder="Buscar"
                 className="form-control"
                 id="text" />
+              {errors.search &&
+                <p className="text-danger" >Por favor llenar el campo de busqueda.</p>
+              }
+
             </div>
           </div>
           <div className="col-sm">

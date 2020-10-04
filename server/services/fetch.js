@@ -7,7 +7,10 @@ module.exports = fetchService = async (method ,uri, options) => {
   return await axios({
     method:method,
     url:uri,
-    params:options
+    params:options,
+    headers: {
+      'content-type': 'application/json'
+    }
   })
   .then(function (response) {
     return response.data
