@@ -4,7 +4,7 @@ const router = express.Router()
 const dataCentralizeService = require('../services/dataCentralize')
 
 
-router.get('/:search', dataCentralizeService )
+router.get('/cetralize-data/:search', dataCentralizeService )
 
 
 module.exports = router;

@@ -21,7 +21,11 @@
     "nodemon": "^2.0.4",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.0-beta.16",
+    "react-bootstrap-table-next": "^4.0.3",
+    "react-bootstrap-table2-paginator": "^2.1.2",
     "react-dom": "^16.13.1",
+    "react-hook-form": "^6.6.0",
+    "react-table": "^6.11.5",
     "soap": "^0.33.0"
   }
 }
