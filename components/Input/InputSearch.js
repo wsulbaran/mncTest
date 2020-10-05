@@ -8,7 +8,7 @@ const InputSearch = ({onSubmit}) => {
   return(
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="row">
+        <div className="row center-search">
           <div className="col-sm">
             <div className="form-group">
               <input
@@ -19,9 +19,8 @@ const InputSearch = ({onSubmit}) => {
                 className="form-control"
                 id="text" />
               {errors.search &&
-                <p className="text-danger" >Por favor llenar el campo de busqueda.</p>
+                <p className="text-danger" >Por favor llenar el campo de búsqueda.</p>
               }
-
             </div>
           </div>
           <div className="col-sm">

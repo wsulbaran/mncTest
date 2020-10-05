@@ -9,7 +9,6 @@ var convert = require('xml-js');
 const DataCentalize = async (req, res) => {
   try {
     if (req.params.search){
-      console.log('jajaj');
       const dataSearch  = req.params.search.toLowerCase()
       const dataTvmaze = await  tvmazeController(dataSearch);
       const dataItune = await ituneController(dataSearch);
@@ -26,12 +25,10 @@ const DataCentalize = async (req, res) => {
       }
       res.status(201).json(dataCentralize);
     } else {
-      console.log('jajajaj');
       throw new Error('Debe ingresar el parametro de busqueda');
     }
 
   } catch (error) {
-    console.log(error);
     res.status(400).json({
       status: 'fail',
       message: error

@@ -27,6 +27,7 @@
     "react-hook-form": "^6.6.0",
     "react-table": "^6.11.5",
     "soap": "^0.33.0",
+    "swagger-ui-express": "^4.1.4",
     "xml-js": "^1.6.11"
   }
 }

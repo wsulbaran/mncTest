@@ -15,17 +15,20 @@ module.exports = PersonController = async (data) => {
   newData = newData['SOAP-ENV:Envelope']['SOAP-ENV:Body']['QueryByNameResponse']['QueryByNameResult']['diffgr:diffgram']['QueryByName_DataSet'];
 
   if(newData['QueryByName']){
-    console.log('vacilatela');
     newData = newData['QueryByName'];
-    newData.map(item => {
-      console.log(item['Name']['_text']);
-      newArray.push({
-        _id:0,
-        name: item['Name']['_text'],
-        type:"Persona",
-        origin: "CRCIND"
-      })
-    })
+    if(newData.length > 0){
+      newData.map(item => {
+        newArray.push({
+          _id:0,
+          name: item['Name']['_text'],
+          type:"Persona",
+          origin: "/crcind.png",
+          img:"/person.png"
+        })
+      });
+    } else {
+      newData = [newData];
+    }
   } else {
     newData = [];
   }

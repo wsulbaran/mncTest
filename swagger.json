@@ -1,0 +1,90 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Api De Centralización De Datos",
+    "description": "Application API"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Api centralize-data",
+      "description": "API que centraliza datos de tres end points"
+    }
+  ],
+  "schemes": ["http"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths":{
+    "/cetralize-data/{search}": {
+      "get": {
+        "tags": [
+          "GET"
+        ],
+        "summary": "Ingresar un parametro en la ruta.",
+        "description": "Devuelve una array con objectos",
+        "operationId": "getData",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "search",
+            "in": "path",
+            "description": "Buscar",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Data"
+            }
+          },
+          "400": {
+            "description": "Invalid Request"
+          },
+          "404": {
+            "description": "Centralize data not found"
+          }
+        }
+      }
+    }
+  },
+  "definitions":{
+    "Data": {
+      "type":"object",
+      "properties":{
+        "data":{
+          "type":"array",
+          "items":{
+            "type":"object",
+            "properties":{
+              "_id":{
+                "type":"integer"
+              },
+              "name":{
+                "type":"string"
+              },
+              "type":{
+                "type":"string"
+              },
+              "origin":{
+                "type":"string"
+              },
+              "img":{
+                "type":"string"
+              },
+              "link":{
+                "type":"string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

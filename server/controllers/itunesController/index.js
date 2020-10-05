@@ -16,9 +16,11 @@ module.exports = itunesController = async (data) => {
   const newData = SearchData.map(item => {
     return {
       _id:0,
-      name: item.trackName,
-      type: item.primaryGenreName,
-      origin: 'itune'
+      name: (item.trackName)?item.trackName:item.artistName,
+      type: (item.kind)?item.kind:item.wrapperType,
+      origin: '/itunes_logo.png',
+      img:item.artworkUrl100,
+      link:item.trackViewUrl
     }
   })
 

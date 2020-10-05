@@ -14,13 +14,13 @@ const Home = () => {
 
         <div className="row">
 
-          <div className="col-md-5 mx-auto">
+          <div className="col-md-6 mx-auto">
             <div className="px-2">
               <div className="pt-5 pb-4">
-                <h3>Busqueda Centralizada de datos</h3>
+                <img className="fredoole" src="/Fredoodle-new.png" alt="search"/>
               </div>
+              <InputSearch  onSubmit={(data) => setSearch(data)} />
             </div>
-            <InputSearch  onSubmit={(data) => setSearch(data)} />
             <>
               {!validateObj && validateObjValue && <TableCentralizeData search={search}/>}
             </>
